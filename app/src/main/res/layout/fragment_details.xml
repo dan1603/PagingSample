@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="user"
+            type="com.kalashnyk.denys.pagingsample.repository.database.entities.UserEntity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_detail_id"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:textColor="@color/primaryText"
+            android:textSize="28sp"
+            tools:text="@{user.id.toString()}" />
+
+        <TextView
+            android:id="@+id/txt_detail_name"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:textColor="@color/primaryText"
+            android:textSize="28sp"
+            tools:text="@{user.name}" />
+
+        <TextView
+            android:id="@+id/txt_detail_surname"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:textColor="@color/primaryText"
+            android:textSize="28sp"
+            tools:text="@{user.surname}" />
+
+        <TextView
+            android:id="@+id/txt_detail_fathername"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:textColor="@color/primaryText"
+            android:textSize="28sp"
+            tools:text="@{user.fathername}" />
+
+        <TextView
+            android:id="@+id/txt_detail_like"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:textColor="@color/primaryText"
+            android:textSize="28sp"
+            tools:text="@{user.like.toString()}" />
+
+        <CheckBox
+            android:id="@+id/chk_like"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="@={user.like}" />
+
+    </LinearLayout>
+</layout>
